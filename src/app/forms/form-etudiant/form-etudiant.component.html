@@ -1,0 +1,150 @@
+<h1 class="w-full text-3xl text-center text-white mb-4">Ajouter un Etudient</h1>
+<form class="max-w-sm mx-auto" [formGroup]="etudients">
+    <div class="mb-5">
+        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom</label>
+        <input type="text" id="name" formControlName="nom"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Raphael" required />
+    </div>
+    <div class="mb-5">
+        <label for="prenoms" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">prenoms</label>
+        <input type="text" id="prenoms" formControlName="prenoms"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required />
+    </div>
+
+    <div class="mb-5">
+        <label for="rue" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">rue</label>
+        <input type="text" id="rue" formControlName="rue"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required />
+    </div>
+
+    <div class="mb-5">
+        <label for="cp" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">cp</label>
+        <input type="text" id="cp" formControlName="cp"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required />
+    </div>
+
+    <div class="mb-5">
+        <label for="ville" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ville</label>
+        <input type="text" id="ville" formControlName="ville"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required />
+    </div>
+    <div class="mb-5">
+        <label for="courriel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">courriel</label>
+        <input type="text" id="courriel" formControlName="courriel"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required />
+    </div>
+    <div class="mb-5">
+        <label for="genre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">genre</label>
+        <input type="text" id="genre" formControlName="genre"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required />
+    </div>
+    <div class="mb-5">
+        <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">age</label>
+        <input type="number" id="age" formControlName="age"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required />
+    </div>
+    <div class="mb-5">
+        <label for="idCand" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">idCand</label>
+        <input type="number" id="idCand" formControlName="idCand"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required />
+    </div>
+
+    <div (click)="creat()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Submit</div>
+</form>
+
+<div class="relative overflow-x-auto w-3/4 m-auto mt-4">
+
+
+
+
+
+
+
+
+
+
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+        *ngIf="nom !== '' && idCand !== null && prenoms !== '' && age !== null && rue !== '' && cp !== '' && ville !== '' && courriel !== '' && genre !== ''">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+
+                <th scope="col" class="px-6 py-3">
+                    Nom
+                </th>
+
+                <th scope="col" class="px-6 py-3">
+                    Prenom
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Rue
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    CP
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Ville
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Courriel
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Genre
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    _age
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Id
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+
+                <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{nom}}
+                </td>
+                <td class="px-6 py-4">
+                    {{prenoms}}
+                </td>
+                <td class="px-6 py-4">
+                    {{rue}}
+                </td>
+                <td class="px-6 py-4">
+                    {{cp}}
+                </td>
+                <td class="px-6 py-4">
+                    {{ville}}
+                </td>
+                <td class="px-6 py-4">
+                    {{courriel}}
+                </td>
+                <td class="px-6 py-4">
+                    {{genre}}
+                </td>
+                <td class="px-6 py-4">
+                    {{age}}
+                </td>
+                <td class="px-6 py-4">
+                    {{idCand}}
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
